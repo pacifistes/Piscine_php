@@ -1,8 +1,7 @@
 #!/usr/bin/php
 <?PHP
 	echo "Entrez un nombre: ";
-	$fichier = fopen("php://stdin", "r+");
-	while (($my_var = fgets($fichier)) != FALSE)
+	while (($my_var = fgets(STDIN) !== FALSE)
 	{
 		$my_var = substr($my_var, 0, strlen($my_var) - 1);
 		if (is_numeric($my_var) == true) {
@@ -19,5 +18,4 @@
 		echo "Entrez un nombre: ";
 	}
 	echo "\n";
-	fclose($fichier);
 ?>

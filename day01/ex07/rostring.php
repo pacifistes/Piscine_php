@@ -7,9 +7,21 @@
 			$str = str_replace("  ", " ", $str);
 		}
 		$my_tab = explode(" ", $str);
-		sort($my_tab);
 		return ($my_tab);
 	}
 
-	print_r(ft_split("Hello    World AAA"));
+	$tab = array();
+	if ($argc > 1) {
+		$tab = ft_split($argv[1]);
+		$i = 0;
+		foreach ($tab as $str) {
+			if ($i > 0) {
+				echo "$str ";
+			}
+			$i++;
+		}
+		if ($i > 0) {
+			echo "$tab[0]\n";
+		}
+	}
 ?>
